@@ -8,10 +8,11 @@ module.exports = {
     // Allow ++ operator
     "no-plusplus": "off"
   },
-  // Typescript-specific overrides
+  // Typescript-specific rules
   overrides: [{
     extends: [
-      "airbnb-typescript/base"
+      "airbnb-typescript/base",
+      "plugin:@typescript-eslint-recommended"
     ],
     files: ["*.ts", "*.tsx"],
     plugins: [
@@ -20,6 +21,7 @@ module.exports = {
     rules: {
       // 4 space indentation
       "@typescript-eslint/indent": ["error", 4],
+
     },
   }]
 };
