@@ -1,5 +1,5 @@
 {
-  "name": "dmn-eslint",
+  "name": "eslint-config-dmn",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
