@@ -1,7 +1,10 @@
 name: Create GH Release
 
 on:
-  push:
+#  push:
+#    branches:
+#      - master
+  pull_request:
     branches:
       - master
 
