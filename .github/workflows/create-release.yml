@@ -12,14 +12,12 @@ jobs:
   create_release:
     name: Create GH release
     runs-on: ubuntu-latest
-    outputs:
-      docker_cache_key: ${{steps.cacheKey.outputs.cache_key}}
     steps:
-      - name: get-npm-version
+      - name: Get current version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
 
-      - name: create-gh-release
+      - name: Create GH release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
