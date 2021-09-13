@@ -29,5 +29,5 @@ jobs:
           draft: false
           prerelease: false
           body: |
-            Version ${{ steps.tag.outputs.image }} is now available.
+            Version ${{ steps.package-version.outputs.current-version }} is now available.
 
