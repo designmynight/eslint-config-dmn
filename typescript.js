@@ -4,7 +4,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "./javascript"
   ],
-  files: ["*.ts", "*.tsx"],
   plugins: [
     '@typescript-eslint',
   ],
