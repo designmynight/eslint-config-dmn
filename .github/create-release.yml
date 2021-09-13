@@ -1,0 +1,30 @@
+name: Create GH Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  create_release:
+    name: Create GH release
+    runs-on: ubuntu-latest
+    outputs:
+      docker_cache_key: ${{steps.cacheKey.outputs.cache_key}}
+    steps:
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: create-gh-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.package-version.outputs.current-version }}
+          release_name: ${{ steps.package-version.outputs.current-version }}
+          draft: false
+          prerelease: false
+          body: |
+            Version ${{ steps.tag.outputs.image }} is now available.
+
