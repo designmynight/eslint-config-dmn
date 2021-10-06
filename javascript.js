@@ -9,6 +9,7 @@ module.exports = {
     'react/jsx-indent-props': ['error', 4],
     // Allow ++ operator
     "no-plusplus": "off",
+    //Allow import react at top of file.
     "no-use-before-define": "off"
   }
 };
