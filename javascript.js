@@ -8,6 +8,7 @@ module.exports = {
     "react/jsx-indent": ["error", 4],
     'react/jsx-indent-props': ['error', 4],
     // Allow ++ operator
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-use-before-define": "off"
   }
 };
