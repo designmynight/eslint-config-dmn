@@ -13,5 +13,6 @@ module.exports = {
     "no-use-before-define": "off",
     // Don't mandate props destructuring.
     "react/destructuring-assignment": "off"
-  }
+  },
+  ignorePatterns: ["*.css", "*.scss"]
 };
