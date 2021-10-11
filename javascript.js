@@ -12,7 +12,18 @@ module.exports = {
     // Allow import react at top of file.
     "no-use-before-define": "off",
     // Don't mandate props destructuring.
-    "react/destructuring-assignment": "off"
+    "react/destructuring-assignment": "off",
+    // Allows ommission of JS/TS extensions.
+    "rules": {
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+        }
+      ]
+    }
   },
   ignorePatterns: ["*.css", "*.scss"]
 };
