@@ -23,7 +23,9 @@ module.exports = {
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    // Don't require default props for functional components.
+    "react/require-default-props": "off"
   },
   ignorePatterns: ["*.css", "*.scss"]
 }
