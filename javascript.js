@@ -13,17 +13,17 @@ module.exports = {
     "no-use-before-define": "off",
     // Don't mandate props destructuring.
     "react/destructuring-assignment": "off",
-    // Allows ommission of JS/TS extensions.
-    "rules": {
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "js": "never",
-          "jsx": "never",
-        }
-      ]
-    }
+    // Allows omission of JS/TS extensions.
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   ignorePatterns: ["*.css", "*.scss"]
 };

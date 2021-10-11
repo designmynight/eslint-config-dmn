@@ -13,17 +13,15 @@ module.exports = {
     // Allows Typescript files to have tsx.
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
     // Allows omission of JS/TS extensions.
-    "rules": {
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "js": "never",
-          "jsx": "never",
-          "ts": "never",
-          "tsx": "never"
-        }
-      ]
-    }
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
 }
