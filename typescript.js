@@ -28,7 +28,9 @@ module.exports = {
             "ts": "never",
             "tsx": "never"
           }
-        ]
+        ],
+        // Allow explicit any - though should still be avoided where possible.
+        "@typescript-eslint/no-explicit-any": "off"
       },
       settings: {
         "import/resolver": {

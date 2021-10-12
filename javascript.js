@@ -25,9 +25,7 @@ module.exports = {
       }
     ],
     // Don't require default props for functional components.
-    "react/require-default-props": "off",
-    // Allow explicit any - though should still be avoided where possible.
-    "@typescript-eslint/no-explicit-any": "off"
+    "react/require-default-props": "off"
   },
   ignorePatterns: ["*.css", "*.scss"]
 }
