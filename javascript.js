@@ -27,7 +27,9 @@ module.exports = {
       }
     ],
     // Don't require default props for functional components.
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    // Increase max line length to 120.
+    "max-len": ["error", {"code": 120}]
   },
   settings: {
     "import/resolver": {
