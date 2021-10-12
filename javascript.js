@@ -31,7 +31,7 @@ module.exports = {
     // Increase max line length to 120.
     "max-len": ["error", {"code": 120}],
     // Allow object properties to be snake case (for API responses).
-    "camelcase": ["error", {properties: "never"}]
+    "camelcase": ["off"]
   },
   settings: {
     "import/resolver": {
