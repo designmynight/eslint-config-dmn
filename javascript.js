@@ -29,7 +29,9 @@ module.exports = {
     // Don't require default props for functional components.
     "react/require-default-props": "off",
     // Increase max line length to 120.
-    "max-len": ["error", {"code": 120}]
+    "max-len": ["error", {"code": 120}],
+    // Allow object properties to be snake case (for API responses).
+    "camelcase": ["error", {properties: "never"}]
   },
   settings: {
     "import/resolver": {
