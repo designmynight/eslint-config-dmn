@@ -7,6 +7,8 @@ module.exports = {
     "indent": ["error", 4, {"SwitchCase": 1}],
     "react/jsx-indent": ["error", 4],
     'react/jsx-indent-props': ['error', 4],
+    // Allows JS files to have jsx.
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     // Allow ++ operator
     "no-plusplus": "off",
     // Allow import react at top of file.
