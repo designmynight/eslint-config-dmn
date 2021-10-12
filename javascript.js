@@ -27,5 +27,5 @@ module.exports = {
     // Don't require default props for functional components.
     "react/require-default-props": "off"
   },
-  ignorePatterns: ["*.css", "*.scss"]
+  ignorePatterns: ["*.css", "*.scss", '*.snap']
 }
