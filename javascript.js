@@ -31,7 +31,9 @@ module.exports = {
     // Increase max line length to 120.
     "max-len": ["error", {"code": 120}],
     // Allow object properties to be snake case (for API responses).
-    "camelcase": ["off"]
+    "camelcase": ["off"],
+    // Allow wrapping labels around tag components.
+    "jsx-a11y/label-has-associated-control": ["off"],
   },
   settings: {
     "import/resolver": {
