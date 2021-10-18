@@ -13,8 +13,6 @@ module.exports = {
     "no-plusplus": "off",
     // Allow import react at top of file.
     "no-use-before-define": "off",
-    // Don't mandate props destructuring.
-    "react/destructuring-assignment": "off",
     // Allows omission of JS/TS extensions.
     "import/extensions": [
       "error",
