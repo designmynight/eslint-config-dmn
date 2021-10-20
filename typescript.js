@@ -28,11 +28,7 @@ module.exports = {
             "ts": "never",
             "tsx": "never"
           }
-        ],
-        // Allow explicit any - though should still be avoided where possible.
-        "@typescript-eslint/no-explicit-any": "off",
-        // Allow non-null assertion.
-        "@typescript-eslint/no-non-null-assertion": "off"
+        ]
       },
       settings: {
         "import/resolver": {

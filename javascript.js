@@ -29,9 +29,7 @@ module.exports = {
     // Don't require default props for functional components.
     "react/require-default-props": "off",
     // Increase max line length to 120.
-    "max-len": ["error", {"code": 120}],
-    // Allow object properties to be snake case (for API responses).
-    "camelcase": ["off"],
+    "max-len": ["warn", {"code": 120}],
     // Allow wrapping labels around tag components.
     "jsx-a11y/label-has-associated-control": ["off"],
   },
