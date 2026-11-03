@@ -29,6 +29,7 @@ compatibility bridge, not a claim of upstream support.
     "eslint": "^10.14.0"
   },
   "overrides": {
+    "minimatch@>=10 <11": "11.0.4",
     "eslint-plugin-react": { "eslint": "$eslint" },
     "eslint-plugin-jsx-a11y": { "eslint": "$eslint" }
   }
@@ -42,6 +43,27 @@ currently need the overrides at installation time because this package bundles
 the React plugins; base/TypeScript exports do not load them at runtime. Remove
 the overrides only once the upstream plugins support ESLint 10 and the fixture
 suite passes against those releases.
+
+### Scoped minimatch security override
+
+The `minimatch@>=10 <11` override pins the named-export API consumers (ESLint,
+its config array, TypeScript ESLint and import-x) to minimatch **11.0.4** for
+GHSA-g3hv-75wg-m249. Consumers must copy this override into their root
+`package.json` too; this package's overrides do not propagate.
+
+Do **not** replace it with an unscoped `"minimatch": "11.0.4"` override:
+React 7.37.5 and jsx-a11y 6.10.2 call the legacy default function from minimatch
+3. Version 11 exports an object with a named `minimatch` function instead.
+An unscoped override would crash React rules such as `jsx-pascal-case` and the
+a11y label/control glob helpers. Regression fixtures exercise those exact calls,
+including wildcard matches and nonmatches; checking JSX filename extensions
+alone would not exercise minimatch.
+
+**This is a partial advisory remediation.** React/a11y's minimatch 3 dependency
+remains affected by GHSA-g3hv-75wg-m249. Clearing those remaining findings needs
+upstream plugin changes or separately reviewed compatible forks; the scoped
+override is not a claim of a clean audit. Do not expose lint configuration or
+glob patterns to untrusted input.
 
 ## Flat-config exports
 

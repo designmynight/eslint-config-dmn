@@ -1,5 +1,6 @@
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
+const { createRequire } = require('node:module');
 const path = require('node:path');
 const test = require('node:test');
 const { ESLint } = require('eslint');
@@ -101,4 +102,54 @@ test('typed files outside a project report a useful parser error', async () => {
     const [result] = await engine('typescript').lintText('export const value: number = 1;', { filePath: path.join(__dirname, 'outside-project.ts') });
     assert.equal(result.fatalErrorCount, 1);
     assert.match(result.messages[0].message, /project service/);
+});
+
+test('minimatch override preserves each dependency API', () => {
+    for (const name of ['eslint', 'eslint-plugin-import-x', '@typescript-eslint/typescript-estree', '@eslint/config-array']) {
+        const fromDependency = createRequire(require.resolve(name));
+        assert.equal(fromDependency('minimatch/package.json').version, '11.0.4', name);
+        assert.equal(typeof fromDependency('minimatch').minimatch, 'function', name);
+    }
+    for (const name of ['eslint-plugin-react', 'eslint-plugin-jsx-a11y']) {
+        const fromDependency = createRequire(require.resolve(name));
+        assert.equal(typeof fromDependency('minimatch'), 'function', name);
+    }
+});
+
+test('React and a11y legacy minimatch calls handle glob matches and nonmatches', async () => {
+    const eslint = new ESLint({
+        overrideConfigFile: true,
+        overrideConfig: [
+            ...require('eslint-config-dmn/react'),
+            {
+                rules: {
+                    'react/jsx-pascal-case': ['error', { ignore: ['Legacy*'] }],
+                    'jsx-a11y/label-has-associated-control': ['error', { assert: 'nesting', controlComponents: ['Input*'] }],
+                },
+            },
+        ],
+    });
+    const [result] = await eslint.lintFiles([fixture('minimatch-react.js')]);
+    assert.equal(result.fatalErrorCount, 0, JSON.stringify(result.messages));
+    const react = result.messages.filter(message => message.ruleId === 'react/jsx-pascal-case');
+    assert.equal(react.length, 1, JSON.stringify(result.messages));
+    assert.match(react[0].message, /Other_widget/);
+    const labels = result.messages.filter(message => message.ruleId === 'jsx-a11y/label-has-associated-control');
+    assert.equal(labels.length, 1, JSON.stringify(result.messages));
+    assert.equal(labels[0].line, 13);
+});
+
+test('import-x uses minimatch 11 for glob matches and nonmatches', async () => {
+    const eslint = new ESLint({
+        overrideConfigFile: true,
+        overrideConfig: [
+            ...require('eslint-config-dmn/base'),
+            { rules: { 'import-x/no-unassigned-import': ['error', { allow: ['**/dependency'] }] } },
+        ],
+    });
+    const [result] = await eslint.lintFiles([fixture('minimatch-imports.js')]);
+    assert.equal(result.fatalErrorCount, 0, JSON.stringify(result.messages));
+    const messages = result.messages.filter(message => message.ruleId === 'import-x/no-unassigned-import');
+    assert.equal(messages.length, 1, JSON.stringify(result.messages));
+    assert.equal(messages[0].line, 2);
 });
