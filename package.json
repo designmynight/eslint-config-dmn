@@ -1,20 +1,58 @@
 {
   "name": "eslint-config-dmn",
-  "version": "1.0.13",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "DMN flat ESLint configurations preserving the Airbnb and DMN lint policy",
+  "main": "javascript.js",
+  "exports": {
+    ".": "./javascript.js",
+    "./base": "./base.js",
+    "./typescript": "./typescript.js",
+    "./react": "./react.js",
+    "./javascript": "./javascript.js",
+    "./typescript-react": "./typescript-react.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "base.js",
+    "typescript.js",
+    "react.js",
+    "javascript.js",
+    "typescript-react.js",
+    "rules"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test test/*.test.js"
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "peerDependencies": {
+    "eslint": "^10.0.0"
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
+    "@eslint/compat": "^2.1.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint-import-resolver-node": "^0.4.0",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "typescript-eslint": "^8.72.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.14.0",
+    "react": "^18.3.1",
+    "typescript": "~5.6.3"
+  },
+  "overrides": {
+    "eslint-plugin-react": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-jsx-a11y": {
+      "eslint": "$eslint"
+    }
   }
 }

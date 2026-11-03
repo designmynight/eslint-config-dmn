@@ -1,0 +1,280 @@
+{
+  "@stylistic-ts/indent": [
+    2,
+    4
+  ],
+  "@stylistic/jsx-quotes": [
+    2,
+    "prefer-double"
+  ],
+  "@typescript-eslint/adjacent-overload-signatures": [
+    2
+  ],
+  "@typescript-eslint/ban-ts-comment": [
+    2
+  ],
+  "@typescript-eslint/no-empty-object-type": [
+    2,
+    {
+      "allowInterfaces": "always"
+    }
+  ],
+  "@typescript-eslint/no-unsafe-function-type": [
+    2
+  ],
+  "@typescript-eslint/no-wrapper-object-types": [
+    2
+  ],
+  "@typescript-eslint/explicit-module-boundary-types": [
+    1
+  ],
+  "@typescript-eslint/no-array-constructor": [
+    2
+  ],
+  "@typescript-eslint/no-empty-function": [
+    2,
+    {
+      "allow": [
+        "arrowFunctions",
+        "functions",
+        "methods"
+      ]
+    }
+  ],
+  "@typescript-eslint/no-empty-interface": [
+    2
+  ],
+  "@typescript-eslint/no-explicit-any": [
+    1
+  ],
+  "@typescript-eslint/no-extra-non-null-assertion": [
+    2
+  ],
+  "@stylistic-ts/no-extra-semi": [
+    2
+  ],
+  "@typescript-eslint/no-inferrable-types": [
+    2
+  ],
+  "@typescript-eslint/no-misused-new": [
+    2
+  ],
+  "@typescript-eslint/no-namespace": [
+    2
+  ],
+  "@typescript-eslint/no-non-null-asserted-optional-chain": [
+    2
+  ],
+  "@typescript-eslint/no-non-null-assertion": [
+    1
+  ],
+  "@typescript-eslint/no-this-alias": [
+    2
+  ],
+  "@typescript-eslint/no-unused-vars": [
+    1,
+    {
+      "vars": "all",
+      "args": "after-used",
+      "ignoreRestSiblings": true,
+      "caughtErrors": "none"
+    }
+  ],
+  "@typescript-eslint/no-var-requires": [
+    2
+  ],
+  "@typescript-eslint/prefer-as-const": [
+    2
+  ],
+  "@typescript-eslint/prefer-namespace-keyword": [
+    2
+  ],
+  "@typescript-eslint/triple-slash-reference": [
+    2
+  ],
+  "@stylistic-ts/brace-style": [
+    2,
+    "1tbs",
+    {
+      "allowSingleLine": true
+    }
+  ],
+  "@typescript-eslint/naming-convention": [
+    2,
+    {
+      "selector": "variable",
+      "format": [
+        "camelCase",
+        "PascalCase",
+        "UPPER_CASE"
+      ]
+    },
+    {
+      "selector": "function",
+      "format": [
+        "camelCase",
+        "PascalCase"
+      ]
+    },
+    {
+      "selector": "typeLike",
+      "format": [
+        "PascalCase"
+      ]
+    }
+  ],
+  "@stylistic-ts/comma-dangle": [
+    2,
+    {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "always-multiline",
+      "enums": "always-multiline",
+      "generics": "always-multiline",
+      "tuples": "always-multiline"
+    }
+  ],
+  "@stylistic-ts/comma-spacing": [
+    2,
+    {
+      "before": false,
+      "after": true
+    }
+  ],
+  "@typescript-eslint/dot-notation": [
+    2,
+    {
+      "allowKeywords": true,
+      "allowPattern": "",
+      "allowPrivateClassPropertyAccess": false,
+      "allowProtectedClassPropertyAccess": false,
+      "allowIndexSignaturePropertyAccess": false
+    }
+  ],
+  "@stylistic-ts/function-call-spacing": [
+    2,
+    "never"
+  ],
+  "@stylistic-ts/keyword-spacing": [
+    2,
+    {
+      "before": true,
+      "after": true,
+      "overrides": {
+        "return": {
+          "after": true
+        },
+        "throw": {
+          "after": true
+        },
+        "case": {
+          "after": true
+        }
+      }
+    }
+  ],
+  "@stylistic-ts/lines-between-class-members": [
+    2,
+    "always",
+    {
+      "exceptAfterSingleLine": false,
+      "exceptAfterOverload": true
+    }
+  ],
+  "@typescript-eslint/no-dupe-class-members": [
+    2
+  ],
+  "@stylistic-ts/no-extra-parens": [
+    0,
+    "all",
+    {
+      "conditionalAssign": true,
+      "nestedBinaryExpressions": false,
+      "returnAssign": false,
+      "ignoreJSX": "all",
+      "enforceForArrowConditionals": false
+    }
+  ],
+  "@typescript-eslint/no-implied-eval": [
+    2
+  ],
+  "@typescript-eslint/no-loop-func": [
+    2
+  ],
+  "@typescript-eslint/no-magic-numbers": [
+    0,
+    {
+      "ignore": [],
+      "ignoreArrayIndexes": true,
+      "enforceConst": true,
+      "detectObjects": false
+    }
+  ],
+  "@typescript-eslint/no-redeclare": [
+    2
+  ],
+  "@typescript-eslint/no-shadow": [
+    2
+  ],
+  "@typescript-eslint/only-throw-error": [
+    2,
+    {
+      "allowThrowingAny": true,
+      "allowThrowingUnknown": true
+    }
+  ],
+  "@typescript-eslint/no-unused-expressions": [
+    2,
+    {
+      "allowShortCircuit": false,
+      "allowTernary": false,
+      "allowTaggedTemplates": false,
+      "enforceForJSX": false
+    }
+  ],
+  "@typescript-eslint/no-use-before-define": [
+    2,
+    {
+      "functions": true,
+      "classes": true,
+      "variables": true
+    }
+  ],
+  "@typescript-eslint/no-useless-constructor": [
+    2
+  ],
+  "@stylistic-ts/quotes": [
+    2,
+    "single",
+    {
+      "avoidEscape": true
+    }
+  ],
+  "@stylistic-ts/semi": [
+    2,
+    "always"
+  ],
+  "@stylistic-ts/space-before-function-paren": [
+    2,
+    {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }
+  ],
+  "@typescript-eslint/require-await": [
+    0
+  ],
+  "@typescript-eslint/return-await": [
+    2
+  ],
+  "@stylistic-ts/space-infix-ops": [
+    2
+  ],
+  "@stylistic-ts/object-curly-spacing": [
+    2,
+    "always"
+  ]
+}
