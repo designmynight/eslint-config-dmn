@@ -1,42 +1,27 @@
-module.exports = {
-  extends: [
-    "./javascript"
-  ],
-  overrides: [
+const base = require('./base');
+const tseslint = require('typescript-eslint');
+const stylistic = require('@stylistic/eslint-plugin');
+
+module.exports = [
+    ...base,
     {
-      extends: [
-        "airbnb-typescript/base",
-        "plugin:@typescript-eslint/recommended",
-        "./javascript"
-      ],
-      plugins: [
-        '@typescript-eslint',
-      ],
-      files: ['**/*.tsx', '**/*.ts'],
-      rules: {
-        // 4 space indentation
-        "@typescript-eslint/indent": ["error", 4],
-        // Allows Typescript files to have tsx.
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
-        // Allows omission of JS/TS extensions.
-        "import/extensions": [
-          "error",
-          "ignorePackages",
-          {
-            "js": "never",
-            "jsx": "never",
-            "ts": "never",
-            "tsx": "never"
-          }
-        ]
-      },
-      settings: {
-        "import/resolver": {
-          "node": {
-            "extensions": [".js", ".jsx", ".ts", ".tsx"]
-          }
-        }
-      }
-    }
-  ]
-}
+        name: 'dmn/typescript',
+        files: ['**/*.{ts,tsx}'],
+        plugins: {
+            '@typescript-eslint': tseslint.plugin,
+            '@stylistic-ts': stylistic,
+        },
+        languageOptions: {
+            parser: tseslint.parser,
+            parserOptions: { projectService: true },
+        },
+        settings: {
+            'import-x/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx', '.d.ts'],
+            'import-x/parsers': {
+                [require.resolve('@typescript-eslint/parser', { paths: [require.resolve('typescript-eslint')] })]: ['.ts', '.tsx', '.d.ts'],
+            },
+            'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
+        },
+        rules: require('./rules/typescript.json'),
+    },
+];

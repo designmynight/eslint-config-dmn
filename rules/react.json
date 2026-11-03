@@ -1,0 +1,803 @@
+{
+  "react/jsx-indent": [
+    2,
+    4
+  ],
+  "react/jsx-indent-props": [
+    2,
+    4
+  ],
+  "react/jsx-filename-extension": [
+    1,
+    {
+      "extensions": [
+        ".js"
+      ]
+    }
+  ],
+  "react/destructuring-assignment": [
+    0,
+    "always"
+  ],
+  "react/require-default-props": [
+    0,
+    {
+      "forbidDefaultForRequired": true
+    }
+  ],
+  "jsx-a11y/label-has-associated-control": [
+    0,
+    {
+      "labelComponents": [],
+      "labelAttributes": [],
+      "controlComponents": [],
+      "assert": "both",
+      "depth": 25
+    }
+  ],
+  "jsx-a11y/anchor-has-content": [
+    2,
+    {
+      "components": []
+    }
+  ],
+  "jsx-a11y/aria-role": [
+    2,
+    {
+      "ignoreNonDOM": false
+    }
+  ],
+  "jsx-a11y/aria-props": [
+    2
+  ],
+  "jsx-a11y/aria-proptypes": [
+    2
+  ],
+  "jsx-a11y/aria-unsupported-elements": [
+    2
+  ],
+  "jsx-a11y/alt-text": [
+    2,
+    {
+      "elements": [
+        "img",
+        "object",
+        "area",
+        "input[type=\"image\"]"
+      ],
+      "img": [],
+      "object": [],
+      "area": [],
+      "input[type=\"image\"]": []
+    }
+  ],
+  "jsx-a11y/img-redundant-alt": [
+    2
+  ],
+  "jsx-a11y/label-has-for": [
+    0,
+    {
+      "components": [],
+      "required": {
+        "every": [
+          "nesting",
+          "id"
+        ]
+      },
+      "allowChildren": false
+    }
+  ],
+  "jsx-a11y/control-has-associated-label": [
+    2,
+    {
+      "labelAttributes": [
+        "label"
+      ],
+      "controlComponents": [],
+      "ignoreElements": [
+        "audio",
+        "canvas",
+        "embed",
+        "input",
+        "textarea",
+        "tr",
+        "video"
+      ],
+      "ignoreRoles": [
+        "grid",
+        "listbox",
+        "menu",
+        "menubar",
+        "radiogroup",
+        "row",
+        "tablist",
+        "toolbar",
+        "tree",
+        "treegrid"
+      ],
+      "depth": 5
+    }
+  ],
+  "jsx-a11y/mouse-events-have-key-events": [
+    2
+  ],
+  "jsx-a11y/no-access-key": [
+    2
+  ],
+  "jsx-a11y/no-onchange": [
+    0
+  ],
+  "jsx-a11y/interactive-supports-focus": [
+    2
+  ],
+  "jsx-a11y/role-has-required-aria-props": [
+    2
+  ],
+  "jsx-a11y/role-supports-aria-props": [
+    2
+  ],
+  "jsx-a11y/tabindex-no-positive": [
+    2
+  ],
+  "jsx-a11y/heading-has-content": [
+    2,
+    {
+      "components": [
+        ""
+      ]
+    }
+  ],
+  "jsx-a11y/html-has-lang": [
+    2
+  ],
+  "jsx-a11y/lang": [
+    2
+  ],
+  "jsx-a11y/no-distracting-elements": [
+    2,
+    {
+      "elements": [
+        "marquee",
+        "blink"
+      ]
+    }
+  ],
+  "jsx-a11y/scope": [
+    2
+  ],
+  "jsx-a11y/click-events-have-key-events": [
+    2
+  ],
+  "jsx-a11y/no-static-element-interactions": [
+    2,
+    {
+      "handlers": [
+        "onClick",
+        "onMouseDown",
+        "onMouseUp",
+        "onKeyPress",
+        "onKeyDown",
+        "onKeyUp"
+      ]
+    }
+  ],
+  "jsx-a11y/no-noninteractive-element-interactions": [
+    2,
+    {
+      "handlers": [
+        "onClick",
+        "onMouseDown",
+        "onMouseUp",
+        "onKeyPress",
+        "onKeyDown",
+        "onKeyUp"
+      ]
+    }
+  ],
+  "jsx-a11y/accessible-emoji": [
+    0
+  ],
+  "jsx-a11y/aria-activedescendant-has-tabindex": [
+    2
+  ],
+  "jsx-a11y/iframe-has-title": [
+    2
+  ],
+  "jsx-a11y/no-autofocus": [
+    2,
+    {
+      "ignoreNonDOM": true
+    }
+  ],
+  "jsx-a11y/no-redundant-roles": [
+    2
+  ],
+  "jsx-a11y/media-has-caption": [
+    2,
+    {
+      "audio": [],
+      "video": [],
+      "track": []
+    }
+  ],
+  "jsx-a11y/no-interactive-element-to-noninteractive-role": [
+    2,
+    {
+      "tr": [
+        "none",
+        "presentation"
+      ]
+    }
+  ],
+  "jsx-a11y/no-noninteractive-element-to-interactive-role": [
+    2,
+    {
+      "ul": [
+        "listbox",
+        "menu",
+        "menubar",
+        "radiogroup",
+        "tablist",
+        "tree",
+        "treegrid"
+      ],
+      "ol": [
+        "listbox",
+        "menu",
+        "menubar",
+        "radiogroup",
+        "tablist",
+        "tree",
+        "treegrid"
+      ],
+      "li": [
+        "menuitem",
+        "option",
+        "row",
+        "tab",
+        "treeitem"
+      ],
+      "table": [
+        "grid"
+      ],
+      "td": [
+        "gridcell"
+      ]
+    }
+  ],
+  "jsx-a11y/no-noninteractive-tabindex": [
+    2,
+    {
+      "tags": [],
+      "roles": [
+        "tabpanel"
+      ]
+    }
+  ],
+  "jsx-a11y/anchor-is-valid": [
+    2,
+    {
+      "components": [
+        "Link"
+      ],
+      "specialLink": [
+        "to"
+      ],
+      "aspects": [
+        "noHref",
+        "invalidHref",
+        "preferButton"
+      ]
+    }
+  ],
+  "jsx-a11y/autocomplete-valid": [
+    0,
+    {
+      "inputComponents": []
+    }
+  ],
+  "no-underscore-dangle": [
+    2,
+    {
+      "allow": [
+        "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
+      ],
+      "allowAfterThis": false,
+      "allowAfterSuper": false,
+      "enforceInMethodNames": true,
+      "allowAfterThisConstructor": false,
+      "allowFunctionParams": true
+    }
+  ],
+  "@stylistic/jsx-quotes": [
+    2,
+    "prefer-double"
+  ],
+  "class-methods-use-this": [
+    2,
+    {
+      "exceptMethods": [
+        "render",
+        "getInitialState",
+        "getDefaultProps",
+        "getChildContext",
+        "componentWillMount",
+        "UNSAFE_componentWillMount",
+        "componentDidMount",
+        "componentWillReceiveProps",
+        "UNSAFE_componentWillReceiveProps",
+        "shouldComponentUpdate",
+        "componentWillUpdate",
+        "UNSAFE_componentWillUpdate",
+        "componentDidUpdate",
+        "componentWillUnmount",
+        "componentDidCatch",
+        "getSnapshotBeforeUpdate"
+      ],
+      "enforceForClassFields": false
+    }
+  ],
+  "react/display-name": [
+    0,
+    {
+      "ignoreTranspilerName": false
+    }
+  ],
+  "react/forbid-prop-types": [
+    2,
+    {
+      "forbid": [
+        "any",
+        "array",
+        "object"
+      ],
+      "checkContextTypes": true,
+      "checkChildContextTypes": true
+    }
+  ],
+  "react/forbid-dom-props": [
+    0,
+    {
+      "forbid": []
+    }
+  ],
+  "react/jsx-boolean-value": [
+    2,
+    "never",
+    {
+      "always": []
+    }
+  ],
+  "react/jsx-closing-bracket-location": [
+    2,
+    "line-aligned"
+  ],
+  "react/jsx-closing-tag-location": [
+    2
+  ],
+  "react/jsx-curly-spacing": [
+    2,
+    "never",
+    {
+      "allowMultiline": true
+    }
+  ],
+  "react/jsx-handler-names": [
+    0,
+    {
+      "eventHandlerPrefix": "handle",
+      "eventHandlerPropPrefix": "on"
+    }
+  ],
+  "react/jsx-key": [
+    0
+  ],
+  "react/jsx-max-props-per-line": [
+    2,
+    {
+      "maximum": 1,
+      "when": "multiline"
+    }
+  ],
+  "react/jsx-no-bind": [
+    2,
+    {
+      "ignoreRefs": true,
+      "allowArrowFunctions": true,
+      "allowFunctions": false,
+      "allowBind": false,
+      "ignoreDOMComponents": true
+    }
+  ],
+  "react/jsx-no-duplicate-props": [
+    2,
+    {
+      "ignoreCase": true
+    }
+  ],
+  "react/jsx-no-literals": [
+    0,
+    {
+      "noStrings": true
+    }
+  ],
+  "react/jsx-no-undef": [
+    2
+  ],
+  "react/jsx-pascal-case": [
+    2,
+    {
+      "allowAllCaps": true,
+      "ignore": []
+    }
+  ],
+  "react/sort-prop-types": [
+    0,
+    {
+      "ignoreCase": true,
+      "callbacksLast": false,
+      "requiredFirst": false,
+      "sortShapeProp": true
+    }
+  ],
+  "react/jsx-sort-props": [
+    0,
+    {
+      "ignoreCase": true,
+      "callbacksLast": false,
+      "shorthandFirst": false,
+      "shorthandLast": false,
+      "noSortAlphabetically": false,
+      "reservedFirst": true
+    }
+  ],
+  "react/jsx-sort-default-props": [
+    0,
+    {
+      "ignoreCase": true
+    }
+  ],
+  "react/jsx-uses-react": [
+    2
+  ],
+  "react/jsx-uses-vars": [
+    2
+  ],
+  "react/no-danger": [
+    1
+  ],
+  "react/no-deprecated": [
+    2
+  ],
+  "react/no-did-mount-set-state": [
+    0
+  ],
+  "react/no-did-update-set-state": [
+    2
+  ],
+  "react/no-will-update-set-state": [
+    2
+  ],
+  "react/no-direct-mutation-state": [
+    0
+  ],
+  "react/no-is-mounted": [
+    2
+  ],
+  "react/no-multi-comp": [
+    0
+  ],
+  "react/no-set-state": [
+    0
+  ],
+  "react/no-string-refs": [
+    2
+  ],
+  "react/no-unknown-property": [
+    2
+  ],
+  "react/prefer-es6-class": [
+    2,
+    "always"
+  ],
+  "react/prefer-stateless-function": [
+    2,
+    {
+      "ignorePureComponents": true
+    }
+  ],
+  "react/prop-types": [
+    2,
+    {
+      "ignore": [],
+      "customValidators": [],
+      "skipUndeclared": false
+    }
+  ],
+  "react/react-in-jsx-scope": [
+    2
+  ],
+  "react/require-render-return": [
+    2
+  ],
+  "react/self-closing-comp": [
+    2
+  ],
+  "react/sort-comp": [
+    2,
+    {
+      "order": [
+        "static-variables",
+        "static-methods",
+        "instance-variables",
+        "lifecycle",
+        "/^handle.+$/",
+        "/^on.+$/",
+        "getters",
+        "setters",
+        "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+        "instance-methods",
+        "everything-else",
+        "rendering"
+      ],
+      "groups": {
+        "lifecycle": [
+          "displayName",
+          "propTypes",
+          "contextTypes",
+          "childContextTypes",
+          "mixins",
+          "statics",
+          "defaultProps",
+          "constructor",
+          "getDefaultProps",
+          "getInitialState",
+          "state",
+          "getChildContext",
+          "getDerivedStateFromProps",
+          "componentWillMount",
+          "UNSAFE_componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "UNSAFE_componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "UNSAFE_componentWillUpdate",
+          "getSnapshotBeforeUpdate",
+          "componentDidUpdate",
+          "componentDidCatch",
+          "componentWillUnmount"
+        ],
+        "rendering": [
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    }
+  ],
+  "react/jsx-wrap-multilines": [
+    2,
+    {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "parens-new-line",
+      "logical": "parens-new-line",
+      "prop": "parens-new-line"
+    }
+  ],
+  "react/jsx-first-prop-new-line": [
+    2,
+    "multiline-multiprop"
+  ],
+  "react/jsx-equals-spacing": [
+    2,
+    "never"
+  ],
+  "react/jsx-no-target-blank": [
+    2,
+    {
+      "enforceDynamicLinks": "always",
+      "links": true,
+      "forms": false
+    }
+  ],
+  "react/jsx-no-comment-textnodes": [
+    2
+  ],
+  "react/no-render-return-value": [
+    2
+  ],
+  "react/require-optimization": [
+    0,
+    {
+      "allowDecorators": []
+    }
+  ],
+  "react/no-find-dom-node": [
+    2
+  ],
+  "react/forbid-component-props": [
+    0,
+    {
+      "forbid": []
+    }
+  ],
+  "react/forbid-elements": [
+    0,
+    {
+      "forbid": []
+    }
+  ],
+  "react/no-danger-with-children": [
+    2
+  ],
+  "react/no-unused-prop-types": [
+    2,
+    {
+      "customValidators": [],
+      "skipShapeProps": true
+    }
+  ],
+  "react/style-prop-object": [
+    2
+  ],
+  "react/no-unescaped-entities": [
+    2
+  ],
+  "react/no-children-prop": [
+    2
+  ],
+  "react/jsx-tag-spacing": [
+    2,
+    {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }
+  ],
+  "react/jsx-space-before-closing": [
+    0,
+    "always"
+  ],
+  "react/no-array-index-key": [
+    2
+  ],
+  "react/forbid-foreign-prop-types": [
+    1,
+    {
+      "allowInPropTypes": true
+    }
+  ],
+  "react/void-dom-elements-no-children": [
+    2
+  ],
+  "react/default-props-match-prop-types": [
+    2,
+    {
+      "allowRequiredDefaults": false
+    }
+  ],
+  "react/no-redundant-should-component-update": [
+    2
+  ],
+  "react/no-unused-state": [
+    2
+  ],
+  "react/boolean-prop-naming": [
+    0,
+    {
+      "propTypeNames": [
+        "bool",
+        "mutuallyExclusiveTrueProps"
+      ],
+      "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+      "message": ""
+    }
+  ],
+  "react/no-typos": [
+    2
+  ],
+  "react/jsx-curly-brace-presence": [
+    2,
+    {
+      "props": "never",
+      "children": "never"
+    }
+  ],
+  "react/jsx-one-expression-per-line": [
+    2,
+    {
+      "allow": "single-child"
+    }
+  ],
+  "react/no-access-state-in-setstate": [
+    2
+  ],
+  "react/button-has-type": [
+    2,
+    {
+      "button": true,
+      "submit": true,
+      "reset": false
+    }
+  ],
+  "react/jsx-child-element-spacing": [
+    0
+  ],
+  "react/no-this-in-sfc": [
+    2
+  ],
+  "react/jsx-max-depth": [
+    0
+  ],
+  "react/jsx-props-no-multi-spaces": [
+    2
+  ],
+  "react/no-unsafe": [
+    0
+  ],
+  "react/jsx-fragments": [
+    2,
+    "syntax"
+  ],
+  "react/jsx-curly-newline": [
+    2,
+    {
+      "multiline": "consistent",
+      "singleline": "consistent"
+    }
+  ],
+  "react/state-in-constructor": [
+    2,
+    "always"
+  ],
+  "react/static-property-placement": [
+    2,
+    "property assignment"
+  ],
+  "react/jsx-props-no-spreading": [
+    2,
+    {
+      "html": "enforce",
+      "custom": "enforce",
+      "explicitSpread": "ignore",
+      "exceptions": []
+    }
+  ],
+  "react/prefer-read-only-props": [
+    0
+  ],
+  "react/jsx-no-script-url": [
+    0,
+    [
+      {
+        "name": "Link",
+        "props": [
+          "to"
+        ]
+      }
+    ]
+  ],
+  "react/jsx-no-useless-fragment": [
+    0
+  ],
+  "react/no-adjacent-inline-elements": [
+    0
+  ],
+  "react/function-component-definition": [
+    0,
+    {
+      "namedComponents": "function-expression",
+      "unnamedComponents": "function-expression"
+    }
+  ],
+  "react-hooks/rules-of-hooks": [
+    2
+  ],
+  "react-hooks/exhaustive-deps": [
+    2
+  ]
+}
